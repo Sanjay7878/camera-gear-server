@@ -1,0 +1,9 @@
+{
+    "apps": [{
+        "name": "CAMERA_GEAR",
+        "script": "./bin/www",
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}

@@ -17,11 +17,11 @@ function start(app) {
     app = _initializeServer(app);
 
     let promise = new Promise((resolve, reject) => {
-        // _connectToDatabase()
-        // .then((data) => {
-        // console.info(data.message);
-        _createServer(app)
-            // })
+        _connectToDatabase()
+            .then((data) => {
+                console.info(data.message);
+                return _createServer(app);
+            })
             .then((data) => {
                 console.info(data.message);
                 resolve({
